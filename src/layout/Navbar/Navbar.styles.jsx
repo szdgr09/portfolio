@@ -1,11 +1,13 @@
-import { styled, Box } from "@mui/material";
+import { styled, Box, Typography } from "@mui/material";
 
 export const StyledBox = styled(Box)(({ theme }) => ({
-  width: "1024px",
-  padding: theme.spacing(1, 0),
+  maxWidth: "1024px",
+  margin: theme.spacing(2),
+  padding: theme.spacing(2),
   backgroundColor: theme.palette.appBar.primary,
   display: "flex",
   position: "relative",
+  borderRadius: theme.spacing(2),
 }));
 
 export const StyledTableCell = styled(Box)(({ theme }) => ({
@@ -13,4 +15,20 @@ export const StyledTableCell = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   paddingRight: theme.spacing(5),
+}));
+
+export const StyledTh = styled("th")(({ thene }) => ({
+  color: "#fff", // TODO contrast
+}));
+
+export const StyledTypography = styled(Typography)(({ theme }) => ({
+  color: "#fff", // TODO contrast
+  paddingLeft: theme.spacing(0.5),
+  textDecoration: "none",
+}));
+
+export const StyledTable = styled("table")(({ theme }) => ({
+  margin: "auto",
+  width: "fit-content",
+  marginLeft: "auto",
 }));

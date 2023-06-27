@@ -27,6 +27,7 @@ const StyledBox = styled(Box, {
 
 const StyledToolBar = styled(Toolbar)(({ theme }) => ({
   minHeight: "80px",
+
   root: {
     minHeight: "80px",
     [theme.breakpoints.up("xs")]: {},

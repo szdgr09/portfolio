@@ -2,6 +2,8 @@ import { ThemeProvider, responsiveFontSizes } from "@mui/material/styles";
 import hizonTheme from "./theme";
 import MainBody from "./layout/MainBody";
 import CssBaseline from "@mui/material/CssBaseline";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/routes";
 
 const theme = responsiveFontSizes(hizonTheme);
 
@@ -10,7 +12,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline>
-          <MainBody />
+          <RouterProvider router={router} />
         </CssBaseline>
       </ThemeProvider>
     </>
