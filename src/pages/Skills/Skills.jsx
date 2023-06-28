@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Paper } from "@mui/material";
 
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -9,6 +9,8 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import { deepOrange } from "@mui/material/colors";
+import ModuleContainer from "../../layout/ModuleContainer/ModuleContainer";
+import HizonAppBar from "../../layout/HizonAppBar/HizonAppBar";
 
 const experiences = [
   {
@@ -41,38 +43,33 @@ const experiences = [
 const Skills = () => {
   return (
     <>
-      <Box>
-        <Typography
-          variant="h5"
-          color="secondary"
-          textAlign="center"
-          fontWeight="bold"
-        >
-          Work Experiences
-        </Typography>
-        <List sx={{ width: "100%", maxWidth: 480 }}>
-          {experiences.map((exp, i) => (
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar sx={{ bgcolor: deepOrange[500] }} />
-              </ListItemAvatar>
-              <ListItemText
-                primary={<Typography variant="h6">{exp.time}</Typography>}
-                secondary={
-                  <Typography
-                    sx={{ display: "inline" }}
-                    variant="h7"
-                    color="text.secondary"
-                    fontWeight="bold"
-                  >
-                    {exp.jobTitle}
-                  </Typography>
-                }
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Box>
+      <ModuleContainer>
+        <HizonAppBar title="Work Experiences" hasSubtitle={false} />
+        <Box display="flex" justifyContent="center">
+          <List sx={{ width: "100%", maxWidth: 480 }}>
+            {experiences.map((exp, i) => (
+              <ListItem alignItems="flex-start" key={`list-${i}`}>
+                <ListItemAvatar>
+                  <Avatar sx={{ bgcolor: deepOrange[500] }} children="P" />
+                </ListItemAvatar>
+                <ListItemText
+                  primary={<Typography variant="h6">{exp.time}</Typography>}
+                  secondary={
+                    <Typography
+                      sx={{ display: "inline" }}
+                      variant="h7"
+                      color="text.secondary"
+                      fontWeight="bold"
+                    >
+                      {exp.jobTitle}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </ModuleContainer>
     </>
   );
 };

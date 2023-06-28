@@ -14,10 +14,10 @@ const Container = () => {
       ext={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
       <StyledContent>
-        <ProfileImage />
         <Box sx={{ flex: 1 }}>
+          {/* <ProfileImage /> */}
           <HizonAppBar />
-          <Typography variant="subtitle1" padding={3} color="white">
+          <Typography variant="h6" padding={3} color="white">
             -- Hizon here (that's my nickname btw). A software engineer mainly
             focusing on frontend development using ReactJS, and I have multiple
             experiences as a software engineer in various industries, including
@@ -25,8 +25,8 @@ const Container = () => {
             Systems Analyst in Philippine Savings Bank (PSBANK).
           </Typography>
           <Typography
-            variant="subtitle1"
-            color="white"
+            variant="h6"
+            color="common.white"
             fontStyle="italic"
             sx={{ padding: (theme) => theme.spacing(0, 3, 3, 3) }}
           >

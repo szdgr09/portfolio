@@ -54,7 +54,11 @@ const Navbar = () => {
           <tr>
             {navs.map((nav, i) => (
               <StyledTh key={`${nav.label}-${i}`}>
-                <StyledTableCell>
+                <StyledTableCell
+                  component={motion.div}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+                >
                   <SvgIcon htmlColor={nav.color}>
                     <nav.icon />
                   </SvgIcon>

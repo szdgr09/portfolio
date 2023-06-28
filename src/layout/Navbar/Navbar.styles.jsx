@@ -17,12 +17,12 @@ export const StyledTableCell = styled(Box)(({ theme }) => ({
   paddingRight: theme.spacing(5),
 }));
 
-export const StyledTh = styled("th")(({ thene }) => ({
-  color: "#fff", // TODO contrast
+export const StyledTh = styled("th")(({ theme }) => ({
+  color: theme.palette.common.white, // TODO contrast
 }));
 
 export const StyledTypography = styled(Typography)(({ theme }) => ({
-  color: "#fff", // TODO contrast
+  color: theme.palette.common.white, // TODO contrast
   paddingLeft: theme.spacing(0.5),
   textDecoration: "none",
 }));

@@ -33,6 +33,7 @@ const hizonTheme = createTheme({
       // primary: "#191919",
       primary: "hsl(252deg 9.16% 16.35%)",
     },
+    divider: "rgb(142, 142, 142)",
     tertiary: {
       red: "#DF0024",
       yellow: "#F3C300",
@@ -50,7 +51,6 @@ const hizonTheme = createTheme({
   overrides: {
     MuiInputBase: {
       // root: {
-      color: "red",
       // Add your custom styles here
       // For example:
       // },

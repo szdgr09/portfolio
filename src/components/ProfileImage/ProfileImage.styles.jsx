@@ -3,15 +3,15 @@ import { styled } from "@mui/material";
 //box
 const ImageMainWapper = styled("div")(({ theme }) => ({
   position: "relative",
-  width: theme.spacing(50),
-  height: theme.spacing(50),
+  width: theme.spacing(20),
+  height: theme.spacing(20),
   borderRadius: "50%",
   overflow: "hidden",
 
   "&::before": {
     content: "''",
     position: "absolute",
-    inset: "4px 72px",
+    inset: "10px 70px",
     background: "linear-gradient(315deg, #1677D2, #DE935E)",
     transition: "0.5s",
     animation: "animate 4s linear infinite",
