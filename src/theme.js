@@ -1,4 +1,4 @@
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 const hizonTheme = createTheme({
   palette: {
@@ -33,12 +33,27 @@ const hizonTheme = createTheme({
       // primary: "#191919",
       primary: "hsl(252deg 9.16% 16.35%)",
     },
+    tertiary: {
+      red: "#DF0024",
+      yellow: "#F3C300",
+      blueGreen: "#00AC9F",
+      blue: "#2E6db4",
+    },
     divider: "rgba(43,42,42,0.12)",
   },
   typography: {
     fontFamily: ["Consolas", "Monaco"].join(","),
     allVariants: {
       color: "#8e8e8e",
+    },
+  },
+  overrides: {
+    MuiInputBase: {
+      // root: {
+      color: "red",
+      // Add your custom styles here
+      // For example:
+      // },
     },
   },
 });

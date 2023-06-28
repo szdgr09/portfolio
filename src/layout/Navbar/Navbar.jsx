@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import EmailIcon from "@mui/icons-material/Email";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
@@ -7,31 +7,42 @@ import { StyledBox, StyledTableCell, StyledTh } from "./Navbar.styles";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { StyledTypography, StyledTable } from "./Navbar.styles";
-
-const navs = [
-  {
-    label: "Home",
-    to: "/",
-    icon: HomeIcon,
-  },
-  {
-    label: "Skills",
-    to: "/skills",
-    icon: AccessibilityNewIcon,
-  },
-  {
-    label: "Tech. & Tools",
-    to: "/technologies",
-    icon: AutoStoriesIcon,
-  },
-  {
-    label: "Contact",
-    to: "/contact",
-    icon: EmailIcon,
-  },
-];
+import { SvgIcon } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 const Navbar = () => {
+  const theme = useTheme();
+
+  const navs = useMemo(() => {
+    console.log("useMemo navs");
+    return [
+      {
+        label: "Home",
+        to: "/",
+        icon: HomeIcon,
+        color: theme.palette.tertiary.red,
+      },
+      {
+        label: "Experiences",
+        to: "/skills",
+        icon: AccessibilityNewIcon,
+        color: theme.palette.tertiary.yellow,
+      },
+      {
+        label: "Tech. & Tools",
+        to: "/technologies",
+        icon: AutoStoriesIcon,
+        color: theme.palette.tertiary.blueGreen,
+      },
+      {
+        label: "Contact",
+        to: "/contact",
+        icon: EmailIcon,
+        color: theme.palette.tertiary.blue,
+      },
+    ];
+  }, [theme]);
+
   return (
     <StyledBox
       component={motion.div}
@@ -44,7 +55,9 @@ const Navbar = () => {
             {navs.map((nav, i) => (
               <StyledTh key={`${nav.label}-${i}`}>
                 <StyledTableCell>
-                  <nav.icon />
+                  <SvgIcon htmlColor={nav.color}>
+                    <nav.icon />
+                  </SvgIcon>
                   <StyledTypography
                     variant="h5"
                     to={nav.to}
