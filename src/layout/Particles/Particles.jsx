@@ -105,7 +105,7 @@ const Design = () => {
                 duration: 0.4,
                 size: 40,
                 color: {
-                  value: "#00AC9F",
+                  value: "#00DFA2",
                 },
                 opacity: 8,
                 mix: false,
@@ -115,7 +115,7 @@ const Design = () => {
                 distance: 200,
                 factor: 200,
                 speed: 1,
-                maxSpeed: 50,
+                maxSpeed: 10,
               },
             },
           },
@@ -123,10 +123,10 @@ const Design = () => {
           particles: {
             collisions: {
               enable: true,
-              mode: "bounce",
+              //   mode: "bounce",
             },
             color: {
-              value: "#2E6db4",
+              value: "#0079FF",
             },
             move: {
               angle: {
@@ -183,32 +183,45 @@ const Design = () => {
                   font: "Font Awesome 6 Brands",
                   style: "",
                   value: ["\uf13b"],
-                  weight: "400",
+                  weight: "500",
                 },
                 {
                   fill: true,
                   font: "Font Awesome 6 Brands",
                   style: "",
                   value: ["\uf38b"],
-                  weight: "400",
+                  weight: "500",
                 },
                 {
                   fill: true,
                   font: "Font Awesome 6 Brands",
                   style: "",
                   value: ["\uf3b9"],
-                  weight: "400",
+                  weight: "500",
                 },
                 {
                   fill: true,
                   font: "Font Awesome 6 Brands",
                   style: "",
                   value: ["\uf41b"],
-                  weight: "400",
+                  weight: "500",
+                },
+                {
+                  fill: true,
+                  font: "Font Awesome 6 Brands",
+                  style: "",
+                  value: ["\uf3b8"],
+                  weight: "500",
+                },
+                {
+                  fill: true,
+                  font: "Font Awesome 6 Brands",
+                  style: "",
+                  value: ["\uf3d3"],
+                  weight: "500",
                 },
               ],
             },
-
             size: {
               random: {
                 enable: true,
@@ -218,7 +231,7 @@ const Design = () => {
               animation: {
                 count: 0,
                 enable: true,
-                speed: 0.2,
+                speed: 0.1,
                 decay: 0,
                 sync: true,
                 destroy: "none",
@@ -227,18 +240,19 @@ const Design = () => {
             },
 
             lineLinked: {
-              blink: false,
+              blink: true,
               color: {
-                value: "#ffffff",
+                value: "#E3F6FF",
               },
               consent: true,
-              distance: 100,
+              distance: 50,
               enable: true,
               frequency: 10,
-              opacity: 0.4,
+              opacity: 0.5,
               width: 1,
             },
           },
+
           pauseOnBlur: true,
           pauseOnOutsideViewport: true,
           smooth: true,

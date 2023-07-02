@@ -12,7 +12,7 @@ import Design from "./Particles/Particles";
 const MainBody = () => {
   return (
     <>
-      <StyledBox id="main">
+      <StyledBox id="main-body">
         <Design />
         <StyledInnerBox>
           <Navbar />
