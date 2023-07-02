@@ -2,6 +2,9 @@ import { createTheme } from "@mui/material/styles";
 
 const hizonTheme = createTheme({
   palette: {
+    background: {
+      default: "hsl(252deg 9.16% 16.35%)",
+    },
     type: "light",
     primary: {
       main: "#ADB176",
@@ -30,7 +33,6 @@ const hizonTheme = createTheme({
       secondary: "#222020",
     },
     mainBody: {
-      // primary: "#191919",
       primary: "hsl(252deg 9.16% 16.35%)",
     },
     divider: "rgb(142, 142, 142)",

@@ -7,11 +7,13 @@ import Skills from "../pages/Skills/Skills";
 import Technologies from "../pages/Technologies/technologies";
 import Container from "./Content/Content";
 import Contact from "../pages/Contact/Contact";
+import Design from "./Particles/Particles";
 
 const MainBody = () => {
   return (
     <>
-      <StyledBox>
+      <StyledBox id="main">
+        <Design />
         <StyledInnerBox>
           <Navbar />
           <Outlet />
