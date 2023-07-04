@@ -1,4 +1,7 @@
 import { createTheme } from "@mui/material/styles";
+import { palette } from "@mui/system";
+
+console.log('test', palette)
 
 const hizonTheme = createTheme({
   palette: {
@@ -50,14 +53,13 @@ const hizonTheme = createTheme({
       color: "#8e8e8e",
     },
   },
-  overrides: {
-    MuiInputBase: {
-      // root: {
-      // Add your custom styles here
-      // For example:
-      // },
-    },
-  },
+  components: {
+    MuiOutlinedInput: {
+      styleOverrides: {
+
+      }
+    }
+  }
 });
 
 export default hizonTheme;
