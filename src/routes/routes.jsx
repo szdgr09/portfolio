@@ -2,9 +2,9 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Container from "../layout/Content/Content";
 import Skills from "../pages/Skills/Skills";
-import Technologies from "../pages/Technologies/technologies";
 import Contact from "../pages/Contact/Contact";
 import MainBody from "../layout/MainBody";
+import TechStack from "../pages/TechStack/TechStack";
 
 const router = createBrowserRouter([
   {
@@ -16,12 +16,12 @@ const router = createBrowserRouter([
         element: <Container />,
       },
       {
-        path: "skills",
-        element: <Skills />,
+        path: "technologies",
+        element: <TechStack />,
       },
       {
-        path: "technologies",
-        element: <Technologies />,
+        path: "skills",
+        element: <Skills />,
       },
       {
         path: "contact",

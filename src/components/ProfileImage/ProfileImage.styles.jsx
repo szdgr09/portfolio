@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 
 //box
-const ImageMainWapper = styled("div")(({ theme }) => ({
+export const ImageMainWapper = styled("div")(({ theme }) => ({
   position: "relative",
   width: theme.spacing(20),
   height: theme.spacing(20),
@@ -37,7 +37,7 @@ const ImageMainWapper = styled("div")(({ theme }) => ({
 }));
 
 // content
-const ImageHolder = styled("div")(({ theme }) => ({
+export const ImageHolder = styled("div")(({ theme }) => ({
   position: "absolute",
   inset: theme.spacing(0.5),
   zIndex: 3,
@@ -60,5 +60,3 @@ const ImageHolder = styled("div")(({ theme }) => ({
     zIndex: 3,
   },
 }));
-
-export { ImageHolder, ImageMainWapper };

@@ -1,6 +1,6 @@
 import { Box, Toolbar, AppBar, styled } from "@mui/material";
 
-const StyledBox = styled(Box, {
+export const StyledBox = styled(Box, {
   //   shouldForwardProp: (props) => props !== "inactive",
 })(({ theme }) => ({
   // margin: "auto",
@@ -25,7 +25,7 @@ const StyledBox = styled(Box, {
   [theme.breakpoints.up("xl")]: {},
 }));
 
-const StyledToolBar = styled(Toolbar)(({ theme }) => ({
+export const StyledToolBar = styled(Toolbar)(({ theme }) => ({
   minHeight: "80px",
 
   root: {
@@ -42,7 +42,7 @@ const StyledToolBar = styled(Toolbar)(({ theme }) => ({
   },
 }));
 
-const StyledAppBar = styled(AppBar)(({ theme }) => ({
+export const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.appBar.secondary,
   position: "relative",
 
@@ -58,5 +58,3 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
     [theme.breakpoints.up("xl")]: {},
   },
 }));
-
-export { StyledBox, StyledToolBar, StyledAppBar };

@@ -1,7 +1,7 @@
 import { ThermostatSharp } from "@mui/icons-material";
 import { Box, styled, Paper } from "@mui/material";
 
-const StyledContainer = styled(Box)(({ theme }) => ({
+export const StyledContainer = styled(Box)(({ theme }) => ({
   // margin: "auto",
   maxWidth: "800px",
   // height: "100%",
@@ -21,7 +21,7 @@ const StyledContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-const StyledContent = styled(Paper)(({ theme }) => ({
+export const StyledContent = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.appBar.primary,
   borderRadius: 0,
   position: "relative",
@@ -33,5 +33,3 @@ const StyledContent = styled(Paper)(({ theme }) => ({
   // borderBottomRightRadius: "16px",
   display: "flex",
 }));
-
-export { StyledContainer, StyledContent };

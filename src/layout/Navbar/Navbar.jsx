@@ -13,35 +13,33 @@ import { useTheme } from "@emotion/react";
 const Navbar = () => {
   const theme = useTheme();
 
-  const navs = useMemo(() => {
-    console.log("useMemo navs");
-    return [
-      {
-        label: "Home",
-        to: "/",
-        icon: HomeIcon,
-        color: theme.palette.tertiary.red,
-      },
-      {
-        label: "Experiences",
-        to: "/skills",
-        icon: AccessibilityNewIcon,
-        color: theme.palette.tertiary.yellow,
-      },
-      {
-        label: "Tech. & Tools",
-        to: "/technologies",
-        icon: AutoStoriesIcon,
-        color: theme.palette.tertiary.blueGreen,
-      },
-      {
-        label: "Contact",
-        to: "/contact",
-        icon: EmailIcon,
-        color: theme.palette.tertiary.blue,
-      },
-    ];
-  }, [theme]);
+  const navs = [
+    {
+      label: "Home",
+      to: "/",
+      icon: HomeIcon,
+      color: theme.palette.tertiary.red,
+    },
+    {
+      label: "Tech. & Tools",
+      to: "/technologies",
+      icon: AutoStoriesIcon,
+      color: theme.palette.tertiary.blueGreen,
+    },
+    {
+      label: "Experiences",
+      to: "/skills",
+      icon: AccessibilityNewIcon,
+      color: theme.palette.tertiary.yellow,
+    },
+
+    {
+      label: "Contact",
+      to: "/contact",
+      icon: EmailIcon,
+      color: theme.palette.tertiary.blue,
+    },
+  ];
 
   return (
     <StyledBox
