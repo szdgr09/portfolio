@@ -2,10 +2,21 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import { StyledBox, StyledToolBar, StyledAppBar } from "./HizonAppbar.styles";
 import { Grid } from "@mui/material";
+import { motion } from "framer-motion";
 
 const HizonAppBar = ({ title, hasSubtitle = true }) => {
   return (
-    <StyledBox>
+    <StyledBox
+      component={motion.div}
+      initial={{ scale: 0, opacity: 0, y: -200 }}
+      animate={{
+        y: 0,
+        scale: 1,
+
+        opacity: 1,
+        transition: { duration: 0.45 },
+      }}
+    >
       <StyledAppBar position="static">
         <StyledToolBar>
           <Grid container padding={1} spacing={1}>

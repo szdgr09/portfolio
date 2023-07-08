@@ -10,7 +10,7 @@ const hizonTheme = createTheme({
     },
     type: "light",
     primary: {
-      main: "#ADB176",
+      main: "#2E6db4",
     },
     secondary: {
       main: "#DE935E",

@@ -16,11 +16,11 @@ const router = createBrowserRouter([
         element: <Container />,
       },
       {
-        path: "technologies",
+        path: "skills",
         element: <TechStack />,
       },
       {
-        path: "skills",
+        path: "experiences",
         element: <Skills />,
       },
       {

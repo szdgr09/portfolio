@@ -8,17 +8,21 @@ export const StyledBox = styled(Box)(({ theme }) => ({
   // flexGrow: 1,
   // padding: theme.spacing(4, 0, 2, 0),
 
-  root: {
-    [theme.breakpoints.up("xs")]: {},
-
-    [theme.breakpoints.up("sm")]: {},
-
-    [theme.breakpoints.up("md")]: {},
-
-    [theme.breakpoints.up("lg")]: {},
-
-    [theme.breakpoints.up("xl")]: {},
+  [theme.breakpoints.up("xs")]: {
+    // transform: "scale(0.5)",
   },
+
+  [theme.breakpoints.up("sm")]: {
+    // transform: "scale(0.5)",
+  },
+
+  [theme.breakpoints.up("md")]: {
+    // transform: "scale(0.5)",
+  },
+
+  [theme.breakpoints.up("lg")]: {},
+
+  [theme.breakpoints.up("xl")]: {},
 }));
 
 export const StyledPaper = styled(Paper)(({ theme }) => ({

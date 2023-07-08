@@ -36,14 +36,14 @@ const Navbar = () => {
         color: theme.palette.tertiary.red,
       },
       {
-        label: "Tech. & Tools",
-        to: "/technologies",
+        label: "Skills",
+        to: "/skills",
         icon: AutoStoriesIcon,
         color: theme.palette.tertiary.blueGreen,
       },
       {
         label: "Experiences",
-        to: "/skills",
+        to: "/experiences",
         icon: AccessibilityNewIcon,
         color: theme.palette.tertiary.yellow,
       },
@@ -69,20 +69,21 @@ const Navbar = () => {
           <tr>
             {navs.map((nav, i) => (
               <StyledTh key={`${nav.label}-${i}`}>
-                <StyledTableCell
-                  component={motion.div}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.8 }}
-                >
-                  <SvgIcon htmlColor={nav.color}>
-                    <nav.icon />
-                  </SvgIcon>
-                  <StyledNavLink to={nav.to} style={handleNavBarStyle}>
+                <StyledNavLink to={nav.to} style={handleNavBarStyle}>
+                  <StyledTableCell
+                    component={motion.div}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.8 }}
+                  >
+                    <SvgIcon htmlColor={nav.color}>
+                      <nav.icon />
+                    </SvgIcon>
+
                     <StyledTypography variant="h5">
                       {nav.label}
                     </StyledTypography>
-                  </StyledNavLink>
-                </StyledTableCell>
+                  </StyledTableCell>
+                </StyledNavLink>
               </StyledTh>
             ))}
           </tr>
