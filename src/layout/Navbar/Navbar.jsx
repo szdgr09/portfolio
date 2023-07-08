@@ -5,23 +5,22 @@ import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import { StyledBox, StyledTableCell, StyledTh } from "./Navbar.styles";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { StyledTypography, StyledTable, StyledNavLink } from "./Navbar.styles";
 import { SvgIcon } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 const Navbar = () => {
   const theme = useTheme();
+  const location = useLocation();
 
+  console.log({ location });
   const handleNavBarStyle = useCallback(
     ({ isActive }) => {
       return {
-        color: theme.palette.common.white,
-        textDecoration: isActive ? "underline" : "none",
-        transform: isActive ? "scale(1.05)" : "scale(1)",
-        textDecorationColor: isActive
+        color: !isActive
           ? theme.palette.secondary.main
-          : "transparent",
+          : theme.palette.primary.main,
       };
     },
     [theme]
