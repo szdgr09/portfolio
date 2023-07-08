@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import { palette } from "@mui/system";
 
-console.log('test', palette)
+// console.log('test', palette)
 
 const hizonTheme = createTheme({
   palette: {
@@ -55,11 +55,9 @@ const hizonTheme = createTheme({
   },
   components: {
     MuiOutlinedInput: {
-      styleOverrides: {
-
-      }
-    }
-  }
+      styleOverrides: {},
+    },
+  },
 });
 
 export default hizonTheme;

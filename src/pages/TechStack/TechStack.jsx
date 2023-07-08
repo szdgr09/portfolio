@@ -7,7 +7,7 @@ const TechStack = () => {
   return (
     <ModuleContainer>
       <HizonAppBar title="Technologies" hasSubtitle={false} />
-      <Box display="flex">dfgfdg</Box>
+      <Box display="flex">dfgfdgasdaasdqasdasdasddasdasd</Box>
     </ModuleContainer>
   );
 };

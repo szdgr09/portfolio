@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import EmailIcon from "@mui/icons-material/Email";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
@@ -6,40 +6,57 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import { StyledBox, StyledTableCell, StyledTh } from "./Navbar.styles";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import { StyledTypography, StyledTable } from "./Navbar.styles";
+import { StyledTypography, StyledTable, StyledNavLink } from "./Navbar.styles";
 import { SvgIcon } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
 const Navbar = () => {
   const theme = useTheme();
 
-  const navs = [
-    {
-      label: "Home",
-      to: "/",
-      icon: HomeIcon,
-      color: theme.palette.tertiary.red,
+  const handleNavBarStyle = useCallback(
+    ({ isActive }) => {
+      return {
+        color: theme.palette.common.white,
+        textDecoration: isActive ? "underline" : "none",
+        transform: isActive ? "scale(1.05)" : "scale(1)",
+        textDecorationColor: isActive
+          ? theme.palette.secondary.main
+          : "transparent",
+      };
     },
-    {
-      label: "Tech. & Tools",
-      to: "/technologies",
-      icon: AutoStoriesIcon,
-      color: theme.palette.tertiary.blueGreen,
-    },
-    {
-      label: "Experiences",
-      to: "/skills",
-      icon: AccessibilityNewIcon,
-      color: theme.palette.tertiary.yellow,
-    },
+    [theme]
+  );
 
-    {
-      label: "Contact",
-      to: "/contact",
-      icon: EmailIcon,
-      color: theme.palette.tertiary.blue,
-    },
-  ];
+  const navs = useMemo(
+    () => [
+      {
+        label: "Home",
+        to: "/",
+        icon: HomeIcon,
+        color: theme.palette.tertiary.red,
+      },
+      {
+        label: "Tech. & Tools",
+        to: "/technologies",
+        icon: AutoStoriesIcon,
+        color: theme.palette.tertiary.blueGreen,
+      },
+      {
+        label: "Experiences",
+        to: "/skills",
+        icon: AccessibilityNewIcon,
+        color: theme.palette.tertiary.yellow,
+      },
+
+      {
+        label: "Contact",
+        to: "/contact",
+        icon: EmailIcon,
+        color: theme.palette.tertiary.blue,
+      },
+    ],
+    [theme]
+  );
 
   return (
     <StyledBox
@@ -60,13 +77,11 @@ const Navbar = () => {
                   <SvgIcon htmlColor={nav.color}>
                     <nav.icon />
                   </SvgIcon>
-                  <StyledTypography
-                    variant="h5"
-                    to={nav.to}
-                    component={NavLink}
-                  >
-                    {nav.label}
-                  </StyledTypography>
+                  <StyledNavLink to={nav.to} style={handleNavBarStyle}>
+                    <StyledTypography variant="h5">
+                      {nav.label}
+                    </StyledTypography>
+                  </StyledNavLink>
                 </StyledTableCell>
               </StyledTh>
             ))}
