@@ -1,26 +1,40 @@
-import React from 'react'
-import TextField from '@mui/material/TextField'
-import { Controller } from 'react-hook-form'
+import React from "react";
+import TextField from "@mui/material/TextField";
+import { Controller } from "react-hook-form";
 
 const InputField = (props) => {
-    const { name, label, control, errors, ...rest } = props;
+  const { name, label, control, errors, ...rest } = props;
 
-    return (
+  return (
     <Controller
-        name={name}
-        control={control}
-        render={({ field }) => (
-            <TextField 
-                label={label}
-                fullWidth
-                error={!!errors?.[name] || null}
-                helperText={errors?.[name]?.['message'] ? errors?.[name]?.['message'] 
-                : '\u00A0' }
-                {...rest}
-                {...field}
-            />
-        )}/>
-  )
-}
+      name={name}
+      control={control}
+      render={({ field }) => (
+        <TextField
+          color="secondary"
+          label={label}
+          fullWidth
+          variant="standard"
+          focused
+          error={!!errors?.[name] || null}
+          helperText={
+            errors?.[name]?.["message"] ? errors?.[name]?.["message"] : "\u00A0"
+          }
+          {...rest}
+          {...field}
+          sx={{
+            "& label": {
+              fontSize: "1.3rem",
 
-export default InputField
+              "&::after": {
+                content: '":"',
+              },
+            },
+          }}
+        />
+      )}
+    />
+  );
+};
+
+export default InputField;

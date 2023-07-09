@@ -15,12 +15,13 @@ const Navbar = () => {
   const location = useLocation();
 
   console.log({ location });
+
   const handleNavBarStyle = useCallback(
     ({ isActive }) => {
       return {
         color: !isActive
-          ? theme.palette.secondary.main
-          : theme.palette.primary.main,
+          ? theme.palette.common.white
+          : theme.palette.secondary.main,
       };
     },
     [theme]
@@ -77,8 +78,12 @@ const Navbar = () => {
                     <SvgIcon htmlColor={nav.color}>
                       <nav.icon />
                     </SvgIcon>
-
-                    <StyledTypography variant="h5">
+                    <StyledTypography
+                      variant="h5"
+                      borderBottom={
+                        nav.to === location.pathname ? `2px solid #fff` : "none"
+                      }
+                    >
                       {nav.label}
                     </StyledTypography>
                   </StyledTableCell>

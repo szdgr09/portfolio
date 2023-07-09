@@ -24,7 +24,8 @@ export const StyledTh = styled("th")(({ theme }) => ({
 
 export const StyledTypography = styled(Typography)(({ theme }) => ({
   color: "inherit", // TODO contrast
-  paddingLeft: theme.spacing(0.5),
+  paddingLeft: theme.spacing(0.25),
+  paddingRight: theme.spacing(0.25),
   // textDecoration: "none",
 }));
 

@@ -31,5 +31,6 @@ export const StyledPaper = styled(Paper)(({ theme }) => ({
   position: "relative",
   padding: theme.spacing(2),
   borderRadius: "16px",
+  border: `1px solid ${theme.palette.primary.main}`,
   // display: "flex",
 }));

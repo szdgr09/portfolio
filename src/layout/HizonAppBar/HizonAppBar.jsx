@@ -27,7 +27,7 @@ const HizonAppBar = ({ title, hasSubtitle = true }) => {
               {hasSubtitle ? (
                 <Typography
                   variant="h5"
-                  color="common.white"
+                  color="text.secondary"
                   fontStyle="italic"
                 >
                   {"<Your friendly Technologist/>"}

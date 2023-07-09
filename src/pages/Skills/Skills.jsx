@@ -14,7 +14,7 @@ import HizonAppBar from "../../layout/HizonAppBar/HizonAppBar";
 
 const experiences = [
   {
-    time: "June 2023 - Present",
+    time: "June 2022 - Present",
     jobTitle: "Philippine Savings Bank — Systems Analyst",
     isCurrent: true,
   },

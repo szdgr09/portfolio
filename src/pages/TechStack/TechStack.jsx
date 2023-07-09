@@ -26,7 +26,7 @@ const CARD_CONTENT = [
   },
   {
     header: "NodeJS",
-    years: 0.5,
+    years: 1,
     image: node,
   },
   {
@@ -44,7 +44,7 @@ const CARD_CONTENT = [
     years: 2,
     image: reactjs,
   },
-];
+].sort((a, b) => a.years - b.years);
 
 const CARD_CONTENT_2 = [
   {
@@ -72,7 +72,7 @@ const CARD_CONTENT_2 = [
     years: 3,
     image: css,
   },
-];
+].sort((a, b) => a.years - b.years);
 
 const TechStack = () => {
   return (
@@ -85,7 +85,7 @@ const TechStack = () => {
         pauseOnHover
         speed={20}
       >
-        {CARD_CONTENT.sort((a, b) => a.years - b.years).map((card, index) => (
+        {CARD_CONTENT.map((card, index) => (
           <Box
             key={`box-${index}`}
             padding={1}
@@ -121,7 +121,9 @@ const TechStack = () => {
                   color="common.black"
                   fontWeight={700}
                 >
-                  {card.years} Years
+                  {card.years > 1
+                    ? `${card.years} Years`
+                    : `${card.years} Year`}
                 </Typography>
               </Box>
             </StyledBox>
@@ -136,7 +138,7 @@ const TechStack = () => {
         speed={20}
         direction="right"
       >
-        {CARD_CONTENT_2.sort((a, b) => a.years - b.years).map((card, index) => (
+        {CARD_CONTENT_2.map((card, index) => (
           <Box
             key={`box-${index}`}
             padding={1}
@@ -184,38 +186,3 @@ const TechStack = () => {
 };
 
 export default TechStack;
-
-// <Grid item xs={3} key={`card-${index}`}>
-//   <Box>
-//     <StyledTypography
-//       paragraph
-//       border={2}
-//       variant="h5"
-//       textAlign="center"
-//     >
-//       {card.header}
-//     </StyledTypography>
-//     <StyledBox border={2}>
-//       <Box display="flex" justifyContent="center" paddingY={1}>
-//         <Avatar src={card.image} height="40" width="40" />
-//       </Box>
-//       <Box border={1} margin={1} backgroundColor="common.white">
-//         <Typography
-//           marginX={2}
-//           textAlign="center"
-//           color="common.black"
-//         >
-//           Experience
-//         </Typography>
-//         <Typography
-//           marginX={2}
-//           textAlign="center"
-//           color="common.black"
-//           fontWeight={700}
-//         >
-//           {card.years} Years
-//         </Typography>
-//       </Box>
-//     </StyledBox>
-//   </Box>
-// </Grid>

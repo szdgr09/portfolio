@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
 
 export const StyledBox = styled(Box)(({ theme }) => ({
-  //   padding: theme.spacing(2),
   paddingTop: 0,
 
   borderRadius: theme.spacing(1),

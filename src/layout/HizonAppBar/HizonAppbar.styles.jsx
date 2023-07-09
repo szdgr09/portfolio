@@ -27,6 +27,7 @@ export const StyledBox = styled(Box, {
 
 export const StyledToolBar = styled(Toolbar)(({ theme }) => ({
   minHeight: "80px",
+  border: `1px solid ${theme.palette.primary.main}`,
 
   root: {
     minHeight: "80px",
@@ -44,6 +45,7 @@ export const StyledToolBar = styled(Toolbar)(({ theme }) => ({
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.appBar.secondary,
+
   position: "relative",
 
   root: {

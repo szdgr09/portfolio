@@ -1,10 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid, Button, Avatar } from "@mui/material";
 import React from "react";
-import { StyledContainer, StyledContent } from "./Content.styles";
-import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import HizonAppBar from "../HizonAppBar/HizonAppBar";
-import { motion } from "framer-motion";
 import ModuleContainer from "../ModuleContainer/ModuleContainer";
+import { deepOrange } from "@mui/material/colors";
+import SimCardDownloadIcon from "@mui/icons-material/SimCardDownload";
 
 const Container = () => {
   return (
@@ -24,10 +23,32 @@ const Container = () => {
           variant="h6"
           color="common.white"
           fontStyle="italic"
-          sx={{ padding: (theme) => theme.spacing(0, 3, 3, 3) }}
+          sx={{ padding: (theme) => theme.spacing(0, 3, 2, 3) }}
         >
           A wise man once said, "Let's grab some coffee or beer."
         </Typography>
+        <Box display="flex" justifyContent="center">
+          <Button
+            variant="outlined"
+            sx={{
+              color: deepOrange[300],
+              border: `1px solid ${deepOrange[300]}`,
+              "&:hover": {
+                border: `1px solid ${deepOrange[300]}`,
+              },
+            }}
+            startIcon={<SimCardDownloadIcon />}
+          >
+            <Typography
+              sx={{
+                color: deepOrange[300],
+                fontWeight: 600,
+              }}
+            >
+              Grab CV
+            </Typography>
+          </Button>
+        </Box>
       </Box>
       {/* </StyledContent> */}
     </ModuleContainer>
