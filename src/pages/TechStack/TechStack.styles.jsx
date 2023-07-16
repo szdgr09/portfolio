@@ -3,8 +3,9 @@ import { Box, Typography } from "@mui/material";
 
 export const StyledBox = styled(Box)(({ theme }) => ({
   paddingTop: 0,
+  width: "160px",
 
-  borderRadius: theme.spacing(1),
+  borderRadius: theme.spacing(0.5),
   borderTopLeftRadius: 0,
   borderTopRightRadius: 0,
   display: "flex",

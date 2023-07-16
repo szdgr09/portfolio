@@ -107,7 +107,7 @@ const Design = () => {
                 color: {
                   value: "#00DFA2",
                 },
-                opacity: 8,
+                opacity: 1,
                 mix: false,
               },
 

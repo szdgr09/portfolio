@@ -12,4 +12,5 @@ export const StyledBox = styled(Box)(({ theme }) => ({
   background: theme.palette.mainBody.primary,
   height: "100%",
   position: "relative",
+  // overflow: "hidden",
 }));

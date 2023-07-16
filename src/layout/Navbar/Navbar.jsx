@@ -1,100 +1,30 @@
-import React, { useCallback, useMemo, useState } from "react";
-import HomeIcon from "@mui/icons-material/Home";
-import EmailIcon from "@mui/icons-material/Email";
-import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import { StyledBox, StyledTableCell, StyledTh } from "./Navbar.styles";
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
-import { StyledTypography, StyledTable, StyledNavLink } from "./Navbar.styles";
-import { SvgIcon } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import { Box, Grid, Typography } from "@mui/material";
+import React from "react";
+import TemporaryDrawer from "../../components/Drawer/Drawer";
+import Links from "../Links/Links";
+import { StyledBox } from "./NavBar.styles";
 
-const Navbar = () => {
-  const theme = useTheme();
-  const location = useLocation();
-
-  console.log({ location });
-
-  const handleNavBarStyle = useCallback(
-    ({ isActive }) => {
-      return {
-        color: !isActive
-          ? theme.palette.common.white
-          : theme.palette.secondary.main,
-      };
-    },
-    [theme]
-  );
-
-  const navs = useMemo(
-    () => [
-      {
-        label: "Home",
-        to: "/",
-        icon: HomeIcon,
-        color: theme.palette.tertiary.red,
-      },
-      {
-        label: "Skills",
-        to: "/skills",
-        icon: AutoStoriesIcon,
-        color: theme.palette.tertiary.blueGreen,
-      },
-      {
-        label: "Experiences",
-        to: "/experiences",
-        icon: AccessibilityNewIcon,
-        color: theme.palette.tertiary.yellow,
-      },
-
-      {
-        label: "Contact",
-        to: "/contact",
-        icon: EmailIcon,
-        color: theme.palette.tertiary.blue,
-      },
-    ],
-    [theme]
-  );
-
+const NavBar = () => {
   return (
-    <StyledBox
-      component={motion.div}
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-    >
-      <StyledTable>
-        <thead>
-          <tr>
-            {navs.map((nav, i) => (
-              <StyledTh key={`${nav.label}-${i}`}>
-                <StyledNavLink to={nav.to} style={handleNavBarStyle}>
-                  <StyledTableCell
-                    component={motion.div}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.8 }}
-                  >
-                    <SvgIcon htmlColor={nav.color}>
-                      <nav.icon />
-                    </SvgIcon>
-                    <StyledTypography
-                      variant="h5"
-                      borderBottom={
-                        nav.to === location.pathname ? `2px solid #fff` : "none"
-                      }
-                    >
-                      {nav.label}
-                    </StyledTypography>
-                  </StyledTableCell>
-                </StyledNavLink>
-              </StyledTh>
-            ))}
-          </tr>
-        </thead>
-      </StyledTable>
+    <StyledBox component="div">
+      <Grid display="flex" justifyContent="space-between">
+        <Grid>
+          <Typography
+            variant="h4"
+            color="text.primary"
+            fontWeight="bold"
+            fontFamily="Consolas"
+          >
+            HZ
+          </Typography>
+        </Grid>
+        <Grid>
+          <TemporaryDrawer />
+          <Links />
+        </Grid>
+      </Grid>
     </StyledBox>
   );
 };
 
-export default Navbar;
+export default NavBar;

@@ -1,27 +1,41 @@
 import React from "react";
-import { Typography } from "@mui/material";
-import Navbar from "./Navbar/Navbar";
+// import { Typography } from "@mui/material";
+// import Navbar from "./Navbar/Navbar";
 import { StyledInnerBox, StyledBox } from "./MainBody.styles";
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import Design from "./Particles/Particles";
-import { useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import NavBar from "./Navbar/NavBar";
+import { Box, Grid, Typography } from "@mui/material";
+import About from "../pages/About/About";
+import Technologies from "../pages/Technologies/Technologies";
+import Experiences from "../pages/Experiences/Experiences";
+import Contact from "../pages/Contact/Contact";
+// import { useLocation } from "react-router-dom";
+// import { AnimatePresence } from "framer-motion";
 
 const MainBody = () => {
   return (
     <StyledBox id="main-body">
       <Design />
-      <StyledInnerBox>
-        <Navbar />
-        <AnimatePresence mode="await">
-          <Outlet key={useLocation().path} />
-        </AnimatePresence>
-        <div>
-          <Typography variant="h7" color="common.white">
-            &#9400; Copyright 2023 Hervinson Samson All Right Reserved.
-          </Typography>
-        </div>
-      </StyledInnerBox>
+      <NavBar />
+      <Grid
+        container={true}
+        display="flex"
+        alignContent="center"
+        justifyContent="center"
+      >
+        <About />
+        {/* next */}
+        <Experiences />
+        <Technologies />
+        <Contact />
+        {/* <Grid item xs={12}>
+          Skills
+        </Grid> */}
+        <Grid item xs={12}>
+          Contact
+        </Grid>
+      </Grid>
     </StyledBox>
   );
 };

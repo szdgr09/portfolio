@@ -1,6 +1,4 @@
 import React from "react";
-import ModuleContainer from "../../layout/ModuleContainer/ModuleContainer";
-import HizonAppBar from "../../layout/HizonAppBar/HizonAppBar";
 import { Avatar, Box, Typography } from "@mui/material";
 import { StyledBox, StyledTypography } from "./TechStack.styles";
 import {
@@ -44,9 +42,6 @@ const CARD_CONTENT = [
     years: 2,
     image: reactjs,
   },
-].sort((a, b) => a.years - b.years);
-
-const CARD_CONTENT_2 = [
   {
     header: "Material UI",
     years: 1.5,
@@ -76,14 +71,13 @@ const CARD_CONTENT_2 = [
 
 const TechStack = () => {
   return (
-    <ModuleContainer>
-      <HizonAppBar title="Skills" hasSubtitle={false} />
+    <>
       <Marquee
         gradient={true}
         gradientWidth={40}
         gradientColor={[25, 25, 25]}
         pauseOnHover
-        speed={20}
+        speed={40}
       >
         {CARD_CONTENT.map((card, index) => (
           <Box
@@ -100,15 +94,18 @@ const TechStack = () => {
               border={2}
               variant="h5"
               textAlign="center"
+              fontWeight={500}
             >
               {card.header}
             </StyledTypography>
             <StyledBox border={2}>
               <Box display="flex" justifyContent="center" paddingY={1}>
                 {card.image ? (
-                  <Avatar src={card.image} height="40" width="40" />
+                  <Avatar src={card.image} height="80" width="80" />
                 ) : (
-                  <Avatar>{card.svg}</Avatar>
+                  <Avatar height="80" width="80">
+                    {card.svg}
+                  </Avatar>
                 )}
               </Box>
               <Box border={1} margin={1} backgroundColor="common.white">
@@ -137,51 +134,8 @@ const TechStack = () => {
         pauseOnHover
         speed={20}
         direction="right"
-      >
-        {CARD_CONTENT_2.map((card, index) => (
-          <Box
-            key={`box-${index}`}
-            padding={1}
-            paddingTop={2}
-            component={motion.div}
-            marginY={2}
-            marginTop={1}
-            whileHover={{ y: -15 }}
-          >
-            <StyledTypography
-              paragraph
-              border={2}
-              variant="h5"
-              textAlign="center"
-            >
-              {card.header}
-            </StyledTypography>
-            <StyledBox border={2}>
-              <Box display="flex" justifyContent="center" paddingY={1}>
-                {card.image ? (
-                  <Avatar src={card.image} height="40" width="40" />
-                ) : (
-                  <Avatar>{card.svg}</Avatar>
-                )}
-              </Box>
-              <Box border={1} margin={1} backgroundColor="common.white">
-                <Typography marginX={2} textAlign="center" color="common.black">
-                  Experience
-                </Typography>
-                <Typography
-                  marginX={2}
-                  textAlign="center"
-                  color="common.black"
-                  fontWeight={700}
-                >
-                  {card.years} Years
-                </Typography>
-              </Box>
-            </StyledBox>
-          </Box>
-        ))}
-      </Marquee>
-    </ModuleContainer>
+      ></Marquee>
+    </>
   );
 };
 

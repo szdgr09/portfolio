@@ -2,20 +2,25 @@ import { styled } from "@mui/material";
 
 //box
 export const ImageMainWapper = styled("div")(({ theme }) => ({
+  [theme.breakpoints.up("xs")]: {
+    width: theme.spacing(30),
+    height: theme.spacing(30),
+    // margin: theme.spacing(0, 2),
+  },
   position: "relative",
-  width: theme.spacing(20),
-  height: theme.spacing(20),
+  width: theme.spacing(40),
+  height: theme.spacing(40),
   borderRadius: "50%",
   overflow: "hidden",
 
   "&::before": {
     content: "''",
     position: "absolute",
-    inset: "10px 70px",
+    inset: "10px 10px",
     background: "linear-gradient(315deg, #1677D2, #DE935E)",
     transition: "0.5s",
     animation: "animate 4s linear infinite",
-    filter: `blur(${theme.spacing(2)})`,
+    // filter: `blur(${theme.spacing(40)})`,
   },
 
   "@keyframes animate": {
@@ -30,7 +35,7 @@ export const ImageMainWapper = styled("div")(({ theme }) => ({
   "&::after": {
     content: "''",
     position: "absolute",
-    inset: "24px",
+    inset: "20px",
     background: "inherit",
     zIndex: 1,
   },

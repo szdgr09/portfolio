@@ -1,11 +1,21 @@
- html, body, #root {
-    height: 100%;
+ html, #root {
+    height: -webkit-fill-available;
     margin: 0;
     padding: 0;
 }
 
+body {
+ height: 100vh;
+ height: --webkit-fill-available;
+}
+
 * {
     box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('../src/assets/font/Dosis-VariableFont_wght.ttf') format('truetype');
 }
 /* 
 .area{
@@ -23,7 +33,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    4318: hidden;
 }
 
 .circles li{

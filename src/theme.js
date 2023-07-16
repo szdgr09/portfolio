@@ -28,8 +28,8 @@ const hizonTheme = createTheme({
       main: "#00C300",
     },
     text: {
-      primary: "#8e8e8e",
       secondary: "#c3c3c3",
+      primary: "#fff",
     },
     appBar: {
       primary: "#111",
@@ -48,9 +48,9 @@ const hizonTheme = createTheme({
     divider: "rgba(43,42,42,0.12)",
   },
   typography: {
-    fontFamily: ["Consolas", "Monaco"].join(","),
+    fontFamily: ["Dosis", "Monaco", "Consolas"].join(","),
     allVariants: {
-      color: "#8e8e8e",
+      color: "#fff",
     },
   },
   components: {
