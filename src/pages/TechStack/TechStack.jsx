@@ -78,6 +78,7 @@ const TechStack = () => {
         gradientColor={[25, 25, 25]}
         pauseOnHover
         speed={40}
+        autoFill
       >
         {CARD_CONTENT.map((card, index) => (
           <Box

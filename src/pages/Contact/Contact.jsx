@@ -1,13 +1,13 @@
 import React from "react";
-import { Box, Grid, Typography, Paper, TextField, Button } from "@mui/material";
-import ModuleContainer from "../../layout/ModuleContainer/ModuleContainer";
-import HizonAppBar from "../../layout/HizonAppBar/HizonAppBar";
+import { Box, Grid, Typography, Button } from "@mui/material";
 import InputField from "../../components/InputField/InputField";
 import { useForm } from "react-hook-form";
-// import { schema } from "../__legacy/Contact/schema";
+import { schema } from "./schema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser";
 import { StyledGridWrapper, StyledGrid } from "./Contact.styles";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import SectionSubtitle from "../../components/SectionSubtitle/SectionSubtitle";
 
 const Contact = () => {
   const {
@@ -16,7 +16,7 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    // resolver: yupResolver(schema),
+    resolver: yupResolver(schema),
   });
 
   const onSubmit = (data) => {
@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <StyledGridWrapper item xs={12} id="technologies">
+    <StyledGridWrapper item xs={12} id="contact">
       <StyledGrid
         container
         justifyContent="center"
@@ -53,17 +53,8 @@ const Contact = () => {
         spacing={2}
       >
         <Grid item xs={12}>
-          <Typography variant="h4" fontWeight={700} color="text.secondary">
-            Want to connect?
-          </Typography>
-          <Typography
-            variant="h3"
-            fontWeight={700}
-            color="secondary"
-            paddingY={2}
-          >
-            Contact Me
-          </Typography>
+          <SectionSubtitle label="Want to connect?" />
+          <SectionTitle label=" Contact Me" />
         </Grid>
         <Grid xs={12} item marginX={2}>
           <Box
@@ -79,6 +70,11 @@ const Contact = () => {
               padding={2}
               border={2}
               borderRadius={1}
+              sx={{
+                "& .MuiGrid-item": {
+                  paddingLeft: 0,
+                },
+              }}
             >
               <Grid item xs={12}>
                 <InputField
@@ -87,6 +83,7 @@ const Contact = () => {
                   fullWidth
                   errors={errors}
                   control={control}
+                  placeholder="Enter your Name here"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -96,6 +93,7 @@ const Contact = () => {
                   fullWidth
                   errors={errors}
                   control={control}
+                  placeholder="Enter your email here"
                 />
               </Grid>
 
@@ -108,6 +106,7 @@ const Contact = () => {
                   fullWidth
                   errors={errors}
                   control={control}
+                  placeholder="Enter your message here"
                 />
               </Grid>
               <Grid item xs={12}>

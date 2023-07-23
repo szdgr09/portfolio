@@ -2,10 +2,12 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 import { StyledGrid, StyledGridWrapper } from "./Experiences.styles";
 import Skills from "../Skills/Skills";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import SectionSubtitle from "../../components/SectionSubtitle/SectionSubtitle";
 
 const Experiences = () => {
   return (
-    <StyledGridWrapper item xs={12} id="technologies">
+    <StyledGridWrapper item xs={12} id="experiences">
       <StyledGrid
         container
         justifyContent="center"
@@ -14,17 +16,8 @@ const Experiences = () => {
         spacing={2}
       >
         <Grid item xs={12}>
-          <Typography variant="h4" fontWeight={700} color="text.secondary">
-            My Journey
-          </Typography>
-          <Typography
-            variant="h3"
-            fontWeight={700}
-            color="secondary"
-            paddingY={2}
-          >
-            Work Experiences
-          </Typography>
+          <SectionSubtitle label="My Journey" />
+          <SectionTitle label="Work Experiences" />
         </Grid>
         <Grid xs={12} item>
           <Skills />

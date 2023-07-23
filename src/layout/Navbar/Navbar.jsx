@@ -9,12 +9,7 @@ const NavBar = () => {
     <StyledBox component="div">
       <Grid display="flex" justifyContent="space-between">
         <Grid>
-          <Typography
-            variant="h4"
-            color="text.primary"
-            fontWeight="bold"
-            fontFamily="Consolas"
-          >
+          <Typography variant="h4" fontWeight="bold" fontFamily="Consolas">
             HZ
           </Typography>
         </Grid>

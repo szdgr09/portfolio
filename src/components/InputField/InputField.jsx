@@ -30,6 +30,10 @@ const InputField = (props) => {
                 content: '":"',
               },
             },
+            "& p.Mui-error": {
+              fontSize: "0.85rem",
+              // color: "pink !important",
+            },
           }}
         />
       )}

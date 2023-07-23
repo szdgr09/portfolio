@@ -10,6 +10,7 @@ import About from "../pages/About/About";
 import Technologies from "../pages/Technologies/Technologies";
 import Experiences from "../pages/Experiences/Experiences";
 import Contact from "../pages/Contact/Contact";
+import Footer from "../pages/Footer/Footer";
 // import { useLocation } from "react-router-dom";
 // import { AnimatePresence } from "framer-motion";
 
@@ -29,12 +30,10 @@ const MainBody = () => {
         <Experiences />
         <Technologies />
         <Contact />
+        <Footer />
         {/* <Grid item xs={12}>
-          Skills
-        </Grid> */}
-        <Grid item xs={12}>
           Contact
-        </Grid>
+        </Grid> */}
       </Grid>
     </StyledBox>
   );

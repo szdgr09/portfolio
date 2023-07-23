@@ -9,7 +9,6 @@ import cSharpLogo from "../../assets/tech/cSharpLogo";
 import dotNetCore from "../../assets/tech/dotNetCore";
 import oracleSQLLogo from "../../assets/tech/oracleSQLLogo";
 import css from "../../assets/tech/css.png";
-import linkedin from "../../assets/socialImages/linkedin";
 
 export {
   javascript,
@@ -23,5 +22,4 @@ export {
   dotNetCore,
   oracleSQLLogo,
   css,
-  linkedin,
 };

@@ -16,7 +16,7 @@ const hizonTheme = createTheme({
       main: "#DE935E",
     },
     error: {
-      main: "#C00000",
+      main: "#DF0024",
     },
     warning: {
       main: "#FFAA00",

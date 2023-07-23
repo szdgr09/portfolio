@@ -2,10 +2,22 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { StyledGrid } from "./About.styles";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import SectionSubtitle from "../../components/SectionSubtitle/SectionSubtitle";
+
+const shadow = {
+  textShadow: "0 0 6px #DE935E,0 0 10px #DE935E,0 0 15px #DE935E",
+};
+
+const Highlighted = ({ l, ...props }) => (
+  <Box component="span" sx={shadow} {...props}>
+    {l}
+  </Box>
+);
 
 const About = () => {
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} id="about">
       <StyledGrid
         container
         justifyContent="center"
@@ -14,26 +26,19 @@ const About = () => {
         spacing={2}
       >
         <Grid item xs={12}>
-          <Typography variant="h4" fontWeight={700} color="text.secondary">
-            INTRODUCTION
-          </Typography>
-          <Typography
-            variant="h3"
-            fontWeight={700}
-            color="secondary"
-            paddingY={2}
-          >
-            Who Am I?
-          </Typography>
+          <SectionSubtitle label="Introduction" />
+          <SectionTitle label="Who Am I?" />
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <Typography paddingY={2} variant="h6" color="text.primary">
-            -- Hizon here (that's my nickname btw). I specialize primarily in
-            frontend development utilizing ReactJS as a software engineer.
-            Throughout my career, I have gained extensive experience in software
-            engineering across diverse sectors, including manufacturing,
-            hospitality, and banking. Presently, I am employed as a Systems
-            Analyst at a local bank in the Philippines.
+            -- <Highlighted l="Hizon" /> here (that's my nickname btw). I
+            specialize primarily in frontend development utilizing{" "}
+            <Highlighted l="ReactJS" /> as a software engineer. Throughout my
+            career, I have gained extensive experience in software engineering
+            across diverse sectors, including manufacturing, hospitality, and
+            banking. Presently, I am employed as a{" "}
+            <Highlighted l="Systems Analyst" /> at a local bank in the
+            Philippines.
           </Typography>
           <Typography paddingY={2} variant="h6">
             During my downtime, I'm all about PC gaming, especially when it
