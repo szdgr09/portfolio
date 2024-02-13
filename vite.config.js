@@ -9,9 +9,7 @@ export default defineConfig({
     port: 8080,
   },
   resolve: {
-    alias: {
-      src: "/src",
-    },
+    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
   },
   plugins: [
     svgr(),
