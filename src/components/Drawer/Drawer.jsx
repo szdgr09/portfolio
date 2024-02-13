@@ -92,10 +92,10 @@ const TemporaryDrawer = () => {
         </Button>
         <Drawer
           PaperProps={{
-            height: "fit-content",
             sx: {
               background: "transparent",
               boxShadow: "none",
+              height: "fit-content",
             },
           }}
           anchor={"right"}
