@@ -3,7 +3,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import EmailIcon from "@mui/icons-material/Email";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import { StyledBox, StyledTableCell, StyledTh } from "./Navbar.styles";
+import {
+  StyledBox,
+  StyledTableCell,
+  StyledTh,
+} from "src/layout/Navbar/Navbar.styles";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { StyledTypography, StyledTable, StyledNavLink } from "./Navbar.styles";
@@ -77,7 +81,7 @@ const Navbar = () => {
                       <nav.icon />
                     </SvgIcon>
                     <StyledTypography
-                      variant="h5"
+                      variant='h5'
                       borderBottom={
                         nav.to === location.pathname
                           ? `2px solid ${theme.palette.common.white}`
