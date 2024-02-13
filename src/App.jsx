@@ -3,7 +3,6 @@ import hizonTheme from "./theme";
 import CssBaseline from "@mui/material/CssBaseline";
 import router from "./routes/routes";
 import { RouterProvider } from "react-router-dom";
-import MainBody from "./layout/MainBody";
 
 const theme = responsiveFontSizes(hizonTheme);
 

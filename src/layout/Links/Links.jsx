@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { StyledBox } from "./Link.styles";
 
@@ -24,16 +23,16 @@ const LINKS = [
 const Links = () => {
   return (
     <StyledBox
-      component="ul"
-      display="flex"
+      component='ul'
+      display='flex'
       gap={4}
       margin={0}
       sx={{ listStyle: "none" }}
     >
       {LINKS.map((link) => (
-        <Box component="li" key={link.id}>
+        <Box component='li' key={link.id}>
           <Button
-            variant="link"
+            variant='link'
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
@@ -42,7 +41,7 @@ const Links = () => {
                 .scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <Typography variant="h5" fontWeight="bold">
+            <Typography variant='h5' fontWeight='bold'>
               {link.title}
             </Typography>
           </Button>

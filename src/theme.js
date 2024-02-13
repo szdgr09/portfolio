@@ -1,7 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-import { palette } from "@mui/system";
-
-// console.log('test', palette)
 
 const hizonTheme = createTheme({
   palette: {

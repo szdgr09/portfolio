@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import React, { useCallback } from "react";
-import { SvgIcon } from "@mui/material";
+import { useCallback } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -11,7 +10,7 @@ import { IconButton } from "@mui/material";
 
 const AnchorIcon = ({ children, ...rest }) => (
   <IconButton
-    color="primary"
+    color='primary'
     sx={{
       "& > svg": {
         fontSize: "2.25rem",
@@ -60,12 +59,12 @@ const Footer = () => {
   }, []);
 
   return (
-    <Box width="100%" sx={{ backgroundColor: "white" }} marginTop={4}>
+    <Box width='100%' sx={{ backgroundColor: "white" }} marginTop={4}>
       <Box
-        display="flex"
+        display='flex'
         padding={3}
         gap={2}
-        justifyContent="center"
+        justifyContent='center'
         paddingBottom={0}
       >
         {ICONS.map((ICON, index) => (
@@ -78,16 +77,16 @@ const Footer = () => {
         ))}
       </Box>
       <Box
-        component="p"
+        component='p'
         style={{
           textAlign: "center",
           fontSize: "1.2rem",
           fontWeight: 600,
         }}
-        color="primary.main"
+        color='primary.main'
       >
         <IconButton
-          color="primary"
+          color='primary'
           sx={{
             "& > svg": {
               fontSize: "2.25rem",
@@ -95,7 +94,7 @@ const Footer = () => {
           }}
           disabled
         >
-          <CopyrightIcon color="primary" />
+          <CopyrightIcon color='primary' />
         </IconButton>
         Hervinson Samson 2023
       </Box>

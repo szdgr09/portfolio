@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, styled } from "@mui/material";
+import { Grid, styled } from "@mui/material";
 
 export const StyledGrid = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.up("xs")]: {

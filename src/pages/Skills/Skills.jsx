@@ -1,16 +1,11 @@
 import React from "react";
-import { Box, Grid, Paper } from "@mui/material";
-
+import { Box } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
-import { deepOrange } from "@mui/material/colors";
-import ModuleContainer from "../../layout/ModuleContainer/ModuleContainer";
-import HizonAppBar from "../../layout/HizonAppBar/HizonAppBar";
 
 const experiences = [
   {
@@ -48,30 +43,30 @@ const experiences = [
 const Skills = () => {
   return (
     <>
-      <Box display="flex">
+      <Box display='flex'>
         <List sx={{ width: "100%", maxWidth: 480 }}>
           {experiences.map((exp, i) => (
-            <ListItem alignItems="flex-start" key={`list-${i}`}>
+            <ListItem alignItems='flex-start' key={`list-${i}`}>
               <ListItemAvatar>
                 <Avatar
                   sx={{
                     backgroundColor: "white",
                   }}
                   children={
-                    <Typography variant="h6" fontWeight="600" color="primary">
+                    <Typography variant='h6' fontWeight='600' color='primary'>
                       {exp.init}
                     </Typography>
                   }
                 />
               </ListItemAvatar>
               <ListItemText
-                primary={<Typography variant="h6">{exp.time}</Typography>}
+                primary={<Typography variant='h6'>{exp.time}</Typography>}
                 secondary={
                   <Typography
                     sx={{ display: "inline" }}
-                    variant="h7"
-                    color="text.secondary"
-                    fontWeight="bold"
+                    variant='h7'
+                    color='text.secondary'
+                    fontWeight='bold'
                   >
                     {exp.jobTitle}
                   </Typography>

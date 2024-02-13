@@ -34,38 +34,34 @@ const Contact = () => {
         "89hPPKDADuVluFqO4"
       )
       .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (err) => {
-          console.log("FAILED...", err);
-        }
+        (response) => {},
+        (err) => {}
       );
   };
 
   return (
-    <StyledGridWrapper item xs={12} id="contact">
+    <StyledGridWrapper item xs={12} id='contact'>
       <StyledGrid
         container
-        justifyContent="center"
-        alignContent="center"
+        justifyContent='center'
+        alignContent='center'
         margin={"auto"}
         spacing={2}
       >
         <Grid item xs={12}>
-          <SectionSubtitle label="Want to connect?" />
-          <SectionTitle label=" Contact Me" />
+          <SectionSubtitle label='Want to connect?' />
+          <SectionTitle label=' Contact Me' />
         </Grid>
         <Grid xs={12} item marginX={2}>
           <Box
-            component="form"
+            component='form'
             sx={{ display: "contents" }}
             onSubmit={handleSubmit(onSubmit)}
             margin={1}
           >
             <Grid
               container
-              display="flex"
+              display='flex'
               spacing={2}
               padding={2}
               border={2}
@@ -78,43 +74,43 @@ const Contact = () => {
             >
               <Grid item xs={12}>
                 <InputField
-                  label="Name"
-                  name="name"
+                  label='Name'
+                  name='name'
                   fullWidth
                   errors={errors}
                   control={control}
-                  placeholder="Enter your Name here"
+                  placeholder='Enter your Name here'
                 />
               </Grid>
               <Grid item xs={12}>
                 <InputField
-                  label="Email"
-                  name="email"
+                  label='Email'
+                  name='email'
                   fullWidth
                   errors={errors}
                   control={control}
-                  placeholder="Enter your email here"
+                  placeholder='Enter your email here'
                 />
               </Grid>
 
               <Grid item xs={12}>
                 <InputField
-                  label="Message"
-                  name="message"
+                  label='Message'
+                  name='message'
                   rows={5}
                   multiline
                   fullWidth
                   errors={errors}
                   control={control}
-                  placeholder="Enter your message here"
+                  placeholder='Enter your message here'
                 />
               </Grid>
               <Grid item xs={12}>
-                <Box display="flex" justifyContent="center">
+                <Box display='flex' justifyContent='center'>
                   <Button
-                    color="secondary"
-                    variant="outlined"
-                    type="submit"
+                    color='secondary'
+                    variant='outlined'
+                    type='submit'
                     sx={{
                       border: (theme) =>
                         `2px solid ${theme.palette.secondary.main}`,
@@ -126,9 +122,9 @@ const Contact = () => {
                     }}
                   >
                     <Typography
-                      variant="h6"
-                      fontWeight="bold"
-                      color="secondary.main"
+                      variant='h6'
+                      fontWeight='bold'
+                      color='secondary.main'
                     >
                       Send me an Email
                     </Typography>

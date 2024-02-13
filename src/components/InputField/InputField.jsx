@@ -1,20 +1,18 @@
-import React from "react";
 import TextField from "@mui/material/TextField";
 import { Controller } from "react-hook-form";
 
-const InputField = (props) => {
-  const { name, label, control, errors, ...rest } = props;
-
+// eslint-disable-next-line react/prop-types
+const InputField = ({ name, label, control, errors, ...rest }) => {
   return (
     <Controller
       name={name}
       control={control}
       render={({ field }) => (
         <TextField
-          color="secondary"
+          color='secondary'
           label={label}
           fullWidth
-          variant="standard"
+          variant='standard'
           focused
           error={!!errors?.[name] || null}
           helperText={

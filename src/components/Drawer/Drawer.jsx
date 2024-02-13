@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useState } from "react";
+import { Fragment, useCallback, useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -35,7 +35,7 @@ const TemporaryDrawer = () => {
   const list = useCallback(
     () => (
       <Box
-        role="presentation"
+        role='presentation'
         border={2}
         width={200}
         borderRadius={2}
@@ -43,7 +43,7 @@ const TemporaryDrawer = () => {
         mr={3}
       >
         <List>
-          {LINKS.map((link, index) => (
+          {LINKS.map((link) => (
             <ListItem key={link.id} disablePadding>
               <ListItemButton
                 onClick={(e) => {
@@ -59,9 +59,9 @@ const TemporaryDrawer = () => {
                 <ListItemText
                   primary={
                     <Typography
-                      color="text.primary"
-                      variant="h5"
-                      fontWeight="600"
+                      color='text.primary'
+                      variant='h5'
+                      fontWeight='600'
                     >
                       {link.title}
                     </Typography>
@@ -86,7 +86,7 @@ const TemporaryDrawer = () => {
             setOpen(true);
           }}
         >
-          <SvgIcon htmlColor="white">
+          <SvgIcon htmlColor='white'>
             <MenuIcon />
           </SvgIcon>
         </Button>

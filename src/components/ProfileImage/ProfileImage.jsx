@@ -1,4 +1,3 @@
-import React from "react";
 import { ImageHolder, ImageMainWapper } from "./ProfileImage.styles";
 import profile from "../../assets/images/mainProfile.jpg";
 const ProfileImage = () => {
