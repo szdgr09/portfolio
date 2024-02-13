@@ -3,7 +3,7 @@
 // import TemporaryDrawer from "../../components/Drawer/Drawer";
 // import Links from "../Links/Links";
 // import { StyledBox } from "./NavBar.styles";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import React from "react";
 import TemporaryDrawer from "@/components/Drawer/Drawer";
 import Links from "@/layout/Links/Links";
@@ -14,8 +14,9 @@ const NavBar = () => {
     <StyledBox component='div'>
       <Grid display='flex' justifyContent='space-between'>
         <Grid>
-          <Typography variant='h4' fontWeight='bold'>
-            HZ
+          <Typography variant='h4' fontWeight='900' letterSpacing={4}>
+            <Box component='span'>H.</Box>
+            <Box component='span'>Z.</Box>
           </Typography>
         </Grid>
         <Grid>
