@@ -14,7 +14,7 @@ const NavBar = () => {
     <StyledBox component='div'>
       <Grid display='flex' justifyContent='space-between'>
         <Grid>
-          <Typography variant='h4' fontWeight='bold' fontFamily='Consolas'>
+          <Typography variant='h4' fontWeight='bold'>
             HZ
           </Typography>
         </Grid>
