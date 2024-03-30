@@ -38,8 +38,8 @@ const ICONS = [
   },
   {
     icon: <InstagramIcon />,
+    link: "https://www.instagram.com/",
     // link: "https://www.instagram.com/hizonsonzon/",
-    link: "https://www.instagram.com/hizonsonzon/",
   },
   {
     icon: <MailOutlineIcon />,
