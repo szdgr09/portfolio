@@ -100,7 +100,7 @@ const Footer = () => {
         >
           <CopyrightIcon color='primary' />
         </IconButton>
-        Hervinson Samson 2023
+        Hizon 2023
       </Box>
     </Box>
   );
