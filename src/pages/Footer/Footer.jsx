@@ -32,11 +32,11 @@ const ICONS = [
   },
   {
     icon: <FacebookIcon />,
-    link: "https://www.facebook.com/hervinson.samson/",
+    link: "https://www.facebook.com/",
   },
   {
     icon: <InstagramIcon />,
-    link: "https://www.instagram.com/hizonsonzon/",
+    link: "https://www.instagram.com/",
   },
   {
     icon: <MailOutlineIcon />,
@@ -44,7 +44,7 @@ const ICONS = [
   },
   {
     icon: <LinkedInIcon />,
-    link: "https://www.linkedin.com/in/hervinson-samson/",
+    link: "https://www.linkedin.com",
   },
 ];
 
