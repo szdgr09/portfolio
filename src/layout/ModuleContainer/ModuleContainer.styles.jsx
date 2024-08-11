@@ -1,4 +1,3 @@
-import { ThermostatSharp } from "@mui/icons-material";
 import { Box, styled, Paper } from "@mui/material";
 
 export const StyledBox = styled(Box)(({ theme }) => ({
