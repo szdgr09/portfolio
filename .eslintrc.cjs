@@ -14,7 +14,7 @@ module.exports = {
         extensions: [".js", ".vue", ".ts", ".d.ts"],
       },
       alias: {
-        extensions: [".vue", ".js", ".ts", ".scss", ".d.ts"],
+        extensions: [".vue", ".js", ".ts", ".scss", ".d.ts", ".jsx", ".tsx"],
         map: [
           ["@/components", "./src/components"],
           ["@/pages", "./src/pages"],
