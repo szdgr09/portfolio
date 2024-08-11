@@ -4,7 +4,7 @@ import Body from "@/layout/Body.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/portfolio/hizon",
+    path: "/portfolio/",
     element: <Body />,
   },
 ]);
