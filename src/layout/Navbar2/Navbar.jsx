@@ -7,7 +7,7 @@ import { Grid, Typography, Box } from "@mui/material";
 import React from "react";
 import TemporaryDrawer from "@/components/Drawer/Drawer";
 import Links from "@/layout/Links/Links";
-import { StyledBox } from "@/layout/Navbar/Navbar.styles";
+import { StyledBox } from "@/layout/Navbar2/Navbar.styles";
 
 const NavBar = () => {
   return (

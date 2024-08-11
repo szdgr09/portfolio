@@ -19,7 +19,7 @@ import Technologies from "@/pages/Technologies/Technologies";
 import Experiences from "@/pages/Experiences/Experiences";
 import Contact from "@/pages/Contact/Contact";
 import Footer from "@/pages/Footer/Footer";
-import Navbar from "./Navbar/Navbar.jsx";
+import Navbar from "./NavBar2/Navbar.jsx";
 
 const MainBody = () => {
   return (
