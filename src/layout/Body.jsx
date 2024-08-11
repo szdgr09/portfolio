@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledBox } from "./MainBody.styles";
+import { StyledBox } from "./Body.styles";
 import Design from "./Particles/Particles";
 import { Grid } from "@mui/material";
 import About from "@/pages/About/About";
@@ -9,7 +9,7 @@ import Contact from "@/pages/Contact/Contact";
 import Footer from "@/pages/Footer/Footer";
 import Navbar from "@/layout/NavBar2/Navbar.jsx";
 
-const MainBody = () => {
+const Body = () => {
   return (
     <StyledBox id='main-body'>
       <Design />
@@ -34,4 +34,4 @@ const MainBody = () => {
   );
 };
 
-export default MainBody;
+export default Body;
