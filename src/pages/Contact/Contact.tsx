@@ -30,11 +30,7 @@ const Contact = () => {
   const { enqueueSnackbar } = useSnackbar();
 
   const onSubmit = (data : EmailForm) => {
-    enqueueSnackbar("Your mail has been sent!", {
-      variant: "success",
-      persist: true,
-    });
-
+    
     const templateParams = {
       message: data?.message,
       user_name: data?.name,
@@ -54,6 +50,7 @@ const Contact = () => {
             variant: "success",
             persist: true,
           });
+          reset();
         },
         (err) => {
           enqueueSnackbar("Something went wrong! Can't the email right now.", {
