@@ -28,18 +28,15 @@ const AnchorIcon = ({ children, ...rest }) => (
 const ICONS = [
   {
     icon: <GitHubIcon />,
-    // link: "https://github.com/szdgr09",
     link: "https://github.com/szdgr09",
   },
   {
     icon: <FacebookIcon />,
-    link: "https://www.facebook.com/",
-    // link: "https://www.facebook.com/hervinson.samson/",
+    link: "https://www.facebook.com/hervinson.samson/",
   },
   {
     icon: <InstagramIcon />,
-    link: "https://www.instagram.com/",
-    // link: "https://www.instagram.com/hizonsonzon/",
+    link: "https://www.instagram.com/hizonsonzon/",
   },
   {
     icon: <MailOutlineIcon />,
@@ -47,8 +44,7 @@ const ICONS = [
   },
   {
     icon: <LinkedInIcon />,
-    link: "https://www.linkedin.com/in/",
-    // link: "https://www.linkedin.com/in/hervinson-samson/",
+    link: "https://www.linkedin.com/in/hervinson-samson/",
   },
 ];
 
