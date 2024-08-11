@@ -100,7 +100,7 @@ const Footer = () => {
         >
           <CopyrightIcon color='primary' />
         </IconButton>
-        Hizon 2023
+        Hizon 2024
       </Box>
     </Box>
   );
