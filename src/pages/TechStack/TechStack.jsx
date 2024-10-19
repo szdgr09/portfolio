@@ -86,7 +86,7 @@ const TechStack = () => {
             padding={1}
             paddingTop={2}
             component={motion.div}
-            whileHover={{ y: -15 }}
+            whileHover={{ y: -15, rotate: 2 }}
             marginY={2}
             marginBottom={1}
           >
@@ -128,14 +128,6 @@ const TechStack = () => {
           </Box>
         ))}
       </Marquee>
-      <Marquee
-        gradient={true}
-        gradientWidth={40}
-        gradientColor={[25, 25, 25]}
-        pauseOnHover
-        speed={20}
-        direction='right'
-      ></Marquee>
     </>
   );
 };

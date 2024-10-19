@@ -1,21 +1,20 @@
-import React from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
-import InputField from "../../components/InputField/InputField";
-import { useForm } from "react-hook-form";
-import { schema } from "./schema";
-import { yupResolver } from "@hookform/resolvers/yup";
-import emailjs from "@emailjs/browser";
-import { StyledGridWrapper, StyledGrid } from "./Contact.styles";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import SectionSubtitle from "../../components/SectionSubtitle/SectionSubtitle";
-import { useSnackbar } from "notistack";
+import React, { useState } from 'react';
+import { Box, Grid, Typography, Button } from '@mui/material';
+import InputField from '../../components/InputField/InputField';
+import { useForm } from 'react-hook-form';
+import { schema } from './schema';
+import { yupResolver } from '@hookform/resolvers/yup';
+import emailjs from '@emailjs/browser';
+import { StyledGridWrapper, StyledGrid } from './Contact.styles';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import SectionSubtitle from '../../components/SectionSubtitle/SectionSubtitle';
+import { useSnackbar } from 'notistack';
 
 type EmailForm = {
-  name: string,
-  email: string,
-  message: string
-}
-
+  name: string;
+  email: string;
+  message: string;
+};
 
 const Contact = () => {
   const {
@@ -27,10 +26,12 @@ const Contact = () => {
     resolver: yupResolver(schema),
   });
 
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
   const { enqueueSnackbar } = useSnackbar();
 
-  const onSubmit = (data : EmailForm) => {
-    
+  const onSubmit = (data: EmailForm) => {
+    setIsSubmitting(true);
     const templateParams = {
       message: data?.message,
       user_name: data?.name,
@@ -39,26 +40,33 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_nd7pi6n",
-        "template_fwqli7w",
+        'service_nd7pi6n',
+        'template_fwqli7w',
         templateParams,
-        "89hPPKDADuVluFqO4"
+        '89hPPKDADuVluFqO4'
       )
       .then(
         (response) => {
-          enqueueSnackbar("Your mail has been sent!", {
-            variant: "success",
+          enqueueSnackbar('Your mail has been sent!', {
+            variant: 'success',
             persist: true,
           });
-          reset();
+          reset({
+            name: '',
+            email: '',
+            message: '',
+          });
         },
         (err) => {
           enqueueSnackbar("Something went wrong! Can't the email right now.", {
-            variant: "error",
+            variant: 'error',
             persist: true,
           });
         }
-      );
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -67,7 +75,7 @@ const Contact = () => {
         container
         justifyContent='center'
         alignContent='center'
-        margin={"auto"}
+        margin={'auto'}
         spacing={2}
       >
         <Grid item xs={12}>
@@ -77,7 +85,7 @@ const Contact = () => {
         <Grid xs={12} item marginX={2}>
           <Box
             component='form'
-            sx={{ display: "contents" }}
+            sx={{ display: 'contents' }}
             onSubmit={handleSubmit(onSubmit)}
             margin={1}
           >
@@ -89,7 +97,7 @@ const Contact = () => {
               border={2}
               borderRadius={1}
               sx={{
-                "& .MuiGrid-item": {
+                '& .MuiGrid-item': {
                   paddingLeft: 0,
                 },
               }}
@@ -133,11 +141,12 @@ const Contact = () => {
                     color='secondary'
                     variant='outlined'
                     type='submit'
+                    disabled={isSubmitting}
                     sx={{
                       border: (theme) =>
                         `2px solid ${theme.palette.secondary.main}`,
 
-                      "&:hover": {
+                      '&:hover': {
                         border: (theme) =>
                           `2px solid ${theme.palette.secondary.main}`,
                       },
@@ -146,9 +155,9 @@ const Contact = () => {
                     <Typography
                       variant='h6'
                       fontWeight='bold'
-                      color='secondary.main'
+                      color={isSubmitting ? 'primary' : 'secondary.main'}
                     >
-                      Send me an Email
+                      {isSubmitting ? 'Sending an email' : 'Send me an Email'}
                     </Typography>
                   </Button>
                 </Box>
