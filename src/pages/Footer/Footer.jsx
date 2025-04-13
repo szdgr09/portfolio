@@ -10,7 +10,7 @@ import { IconButton } from "@mui/material";
 
 const AnchorIcon = ({ children, ...rest }) => (
   <IconButton
-    color='primary'
+    color="primary"
     sx={{
       "& > svg": {
         fontSize: "2.25rem",
@@ -59,12 +59,12 @@ const Footer = () => {
   }, []);
 
   return (
-    <Box width='100%' sx={{ backgroundColor: "white" }} marginTop={4}>
+    <Box width="100%" sx={{ backgroundColor: "white" }} marginTop={4}>
       <Box
-        display='flex'
+        display="flex"
         padding={3}
         gap={2}
-        justifyContent='center'
+        justifyContent="center"
         paddingBottom={0}
       >
         {ICONS.map((ICON, index) => (
@@ -77,16 +77,16 @@ const Footer = () => {
         ))}
       </Box>
       <Box
-        component='p'
+        component="p"
         style={{
           textAlign: "center",
           fontSize: "1.2rem",
           fontWeight: 600,
         }}
-        color='primary.main'
+        color="primary.main"
       >
         <IconButton
-          color='primary'
+          color="primary"
           sx={{
             "& > svg": {
               fontSize: "2.25rem",
@@ -94,9 +94,9 @@ const Footer = () => {
           }}
           disabled
         >
-          <CopyrightIcon color='primary' />
+          <CopyrightIcon color="primary" />
         </IconButton>
-        Hervinson Samson 2024
+        Hervinson Samson 2025
       </Box>
     </Box>
   );

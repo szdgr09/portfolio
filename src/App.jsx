@@ -14,7 +14,7 @@ const iconVariant = {
   success: <IconWrapper icon={<FavoriteBorderIcon />} />,
   error: <IconWrapper icon={<SentimentVeryDissatisfiedIcon />} />,
 };
-const anchorOrigin = { vertical: "bqottom", horizontal: "center" };
+const anchorOrigin = { vertical: "bottom", horizontal: "center" };
 
 function App() {
   return (
