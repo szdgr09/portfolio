@@ -1,6 +1,6 @@
-import React from 'react';
-import { Avatar, Box, Typography } from '@mui/material';
-import { StyledBox, StyledTypography } from './TechStack.styles';
+import React from "react";
+import { Avatar, Box, Typography } from "@mui/material";
+import { StyledBox, StyledCardBox, StyledTypography } from "./TechStack.styles";
 import {
   javascript,
   html,
@@ -12,58 +12,58 @@ import {
   dotNetCore,
   cSharpLogo,
   css,
-} from '../../components/Images/Image';
-import Marquee from 'react-fast-marquee';
-import { motion } from 'framer-motion';
+} from "../../components/Images/Image";
+import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 const CARD_CONTENT = [
   {
-    header: 'Javascript',
+    header: "Javascript",
     years: new Date().getFullYear() - 2021,
     image: javascript,
   },
   {
-    header: 'NodeJS',
+    header: "NodeJS",
     years: new Date().getFullYear() - 2021,
     image: node,
   },
   {
-    header: 'HTML',
+    header: "HTML",
     years: new Date().getFullYear() - 2021,
     image: html,
   },
   {
-    header: 'Git',
+    header: "Git",
     years: new Date().getFullYear() - 2021,
     image: git,
   },
   {
-    header: 'ReactJS',
+    header: "ReactJS",
     years: new Date().getFullYear() - 2021,
     image: reactjs,
   },
   {
-    header: 'Material UI',
+    header: "Material UI",
     years: new Date().getFullYear() - 2021,
     svg: muiSVG,
   },
-  // {
-  //   header: 'ExpressJS',
-  //   years: 0.5,
-  //   svg: expressLogo,
-  // },
   {
-    header: '.Net Core',
+    header: "ExpressJS",
+    years: 0.5,
+    svg: expressLogo,
+  },
+  {
+    header: ".Net Core",
     years: new Date().getFullYear() - 2022,
     svg: dotNetCore,
   },
   {
-    header: 'C#',
+    header: "C#",
     years: new Date().getFullYear() - 2022,
     svg: cSharpLogo,
   },
   {
-    header: 'CSS',
+    header: "CSS",
     years: new Date().getFullYear() - 2022,
     image: css,
   },
@@ -81,51 +81,34 @@ const TechStack = () => {
         autoFill
       >
         {CARD_CONTENT.map((card, index) => (
-          <Box
+          <StyledCardBox
             key={`box-${index}`}
-            padding={1}
-            paddingTop={2}
             component={motion.div}
             whileHover={{ y: -15, rotate: 2 }}
-            marginY={2}
-            marginBottom={1}
           >
-            <StyledTypography
-              paragraph
-              border={2}
-              variant='h5'
-              textAlign='center'
-              fontWeight={500}
-            >
+            <StyledTypography paragraph variant="h5" textAlign="center">
               {card.header}
             </StyledTypography>
-            <StyledBox border={2}>
-              <Box display='flex' justifyContent='center' paddingY={1}>
+            <StyledBox>
+              <Box display="flex" justifyContent="center" paddingY={3}>
                 {card.image ? (
-                  <Avatar src={card.image} height='80' width='80' />
+                  <Avatar src={card.image} height="100" width="100" />
                 ) : (
-                  <Avatar height='80' width='80'>
+                  <Avatar height="100" width="100">
                     {card.svg}
                   </Avatar>
                 )}
               </Box>
-              <Box border={1} margin={1} backgroundColor='common.white'>
-                <Typography marginX={2} textAlign='center' color='common.black'>
-                  Experience
-                </Typography>
-                <Typography
-                  marginX={2}
-                  textAlign='center'
-                  color='common.black'
-                  fontWeight={700}
-                >
-                  {card.years > 1
-                    ? `${card.years} Years`
-                    : `${card.years} Year`}
-                </Typography>
-              </Box>
+              <Box
+                sx={{
+                  border: (theme) =>
+                    `3px solid ${theme.palette.secondary.main}`,
+                  borderRadius: 2,
+                }}
+                margin={1}
+              ></Box>
             </StyledBox>
-          </Box>
+          </StyledCardBox>
         ))}
       </Marquee>
     </>

@@ -1,5 +1,5 @@
 2;
-import { Box, Grid, Typography, styled } from "@mui/material";
+import { Button, Grid, styled } from "@mui/material";
 
 export const StyledGrid = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.up("xs")]: {
@@ -31,4 +31,20 @@ export const StyledGridWrapper = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.up("sm")]: {
     paddingTop: theme.spacing(16),
   },
+}));
+
+export const StyledSubmitButton = styled(Button)(({ theme }) => ({
+  border: `2px solid ${theme.palette.secondary.main}`,
+  "&:hover": {
+    border: `2px solid ${theme.palette.secondary.main}`,
+  },
+}));
+
+export const StyledGridForm = styled(Grid)(({ theme }) => ({
+  background: "rgba(39, 38, 45, 0.65)",
+  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+  backdropFilter: "blur(2px)",
+  "-webkit-backdrop-filter": "blur(5px)",
+  borderRadius: "8px",
+  border: "1px solid white",
 }));

@@ -32,7 +32,7 @@ const SectionTitle = ({ label }) => {
         <m.div variants={cardVariants}>
           <Typography
             variant="h3"
-            fontWeight={700}
+            fontWeight={600}
             color="secondary"
             paddingY={2}
           >

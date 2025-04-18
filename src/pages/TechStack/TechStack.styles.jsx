@@ -14,13 +14,20 @@ export const StyledBox = styled(Box)(({ theme }) => ({
 }));
 
 export const StyledTypography = styled(Typography)(({ theme }) => ({
-  borderRadius: theme.spacing(1),
-  borderBottomLeftRadius: 0,
-  borderBottomRightRadius: 0,
   width: "100%",
   margin: 0,
-  borderBottom: "none",
-  background: theme.palette.secondary.main,
+  borderBottom: `1px solid ${theme.palette.common.white}`,
+  paddingTop: 4,
+  paddingBottom: 4,
   color: theme.palette.common.white,
-  padding: theme.spacing(0, 0.5, 0, 0.5),
+}));
+
+export const StyledCardBox = styled(Box)(({ theme }) => ({
+  background: "rgba(46, 109, 180, 0.15)",
+  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+  backdropFilter: "blur(5px)",
+  "-webkit-backdrop-filter": "blur(5px)",
+  borderRadius: "8px",
+  border: "1px solid rgba(46, 109, 180, 0.99)",
+  margin: theme.spacing(2, 1),
 }));

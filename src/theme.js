@@ -47,6 +47,7 @@ const hizonTheme = createTheme({
   typography: {
     fontFamily: ["Dosis", "Monaco", "Consolas"].join(","),
     allVariants: {
+      letterSpacing: "0.03rem",
       color: "#fff",
     },
   },

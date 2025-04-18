@@ -30,7 +30,16 @@ const SectionTitle = ({ label }) => {
         viewport={{ once: true, amount: 1 }}
       >
         <m.div variants={cardVariants}>
-          <Typography variant="h4" fontWeight={700} color="text.secondary">
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            color="text.primary"
+            sx={{
+              "&:hover": {
+                color: (theme) => theme.palette.tertiary.blueGreen,
+              },
+            }}
+          >
             {label}
           </Typography>
         </m.div>
