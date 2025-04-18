@@ -5,6 +5,7 @@ import { styled } from "@mui/material/styles";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import SectionSubtitle from "../../components/SectionSubtitle/SectionSubtitle";
+import { BorderColor, BorderRight } from "@mui/icons-material";
 
 const shadow = {
   textShadow: "0 0 6px #DE935E,0 0 10px #DE935E,0 0 15px #DE935E",
@@ -20,6 +21,9 @@ const Button = ({ children }) => {
         component="p"
         variant="h3"
         color="secondary"
+        sx={{
+          color: (theme) => theme.palette.secondary.main,
+        }}
       >
         {children}
       </Typography>
@@ -31,14 +35,15 @@ const StyledWrapper = styled("div")(({ theme }) => ({
   ".btnWhite": {
     display: "inline-flex",
     alignItems: "center",
-    color: "#fff",
-    // border: "1px solid #fff",
+    // color: "#fff",
     minHeight: "50px",
-    // padding: "0 20px",
     textTransform: "uppercase",
     zIndex: 1,
     position: "relative",
     backgroundColor: "transparent",
+    cursor: "pointer",
+
+    margin: "0 auto",
   },
 
   // ".btnWhite::before": {
