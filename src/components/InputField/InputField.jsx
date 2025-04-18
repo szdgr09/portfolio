@@ -9,10 +9,10 @@ const InputField = ({ name, label, control, errors, ...rest }) => {
       control={control}
       render={({ field }) => (
         <TextField
-          color='secondary'
+          color="secondary"
           label={label}
           fullWidth
-          variant='standard'
+          variant="standard"
           focused
           error={!!errors?.[name] || null}
           helperText={
@@ -22,15 +22,14 @@ const InputField = ({ name, label, control, errors, ...rest }) => {
           {...field}
           sx={{
             "& label": {
-              fontSize: "1.2rem",
+              fontSize: "1.4rem",
               fontWeight: 700,
               "&::after": {
                 content: '":"',
               },
             },
             "& p.Mui-error": {
-              fontSize: "0.85rem",
-              // color: "pink !important",
+              fontSize: "1.0rem",
             },
           }}
         />
